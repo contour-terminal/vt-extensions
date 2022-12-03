@@ -1,5 +1,15 @@
 ## Synchronized Output
 
+Original article was a gist, found [here](https://gist.github.com/christianparpart/d8a62cc1ab659194337d73e399004036).
+
+Alternate words to this feature has been:
+
+- Batched Rendering
+- Synchronized Updates
+- Synchronized Output
+
+But they all mean the same.
+
 Synchronized output is merely implementing the feature as inspired by iTerm2 synchronized output,
 except that it's not using the rare DCS but rather the well known `SM ?` and `RM ?`. iTerm2 has now also adopted to use the new syntax instead of using DCS.
 
