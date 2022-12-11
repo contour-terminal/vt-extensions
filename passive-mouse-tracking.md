@@ -55,12 +55,12 @@ In case mouse move events are desired as well, the application is free to send `
 
 Since only SGR encoding is supported for passive mouse tracking, the syntax looks equivalent to this, except that an additional parameter is added to indicate whether or not the user interface (terminal) has handled this event as well.
 
-Mouse Press (and move) Syntax: `CSI ? <ButtonAndModifierMask> ; <Column> ; <Line> ; <HandledFlag> M`
+Mouse Press (and move) Syntax: `CSI ? BUTTON_AND_MODIFIER_MASK ; COLUMN ; LINE ; HANDLED_FLAG M`
 
-Mouse Release Syntax: `CSI ? <ButtonAndModifierMask> ; <Column> ; <Line> ; <HandledFlag> m`
+Mouse Release Syntax: `CSI ? BUTTON_AND_MODIFIER_MASK ; COLUMN ; LINE ; HANDLED_FLAG m`
 
-Whereas `<ButtonAndModifierMask`, `Column`, `<Line>` are equivalent to how it is handled already.
-`<HandledFlag>` is either `1` or greater to indicate that the user interface has handled this event as well,
+Whereas `BUTTON_AND_MODIFIER_MASK`, `COLUMN`, `LINE` are equivalent to how it is handled already.
+`HANDLED_FLAG` is either `1` or greater to indicate that the user interface has handled this event as well,
 or value `0` to indicate that the user interface has not handled this event.
 
 ## Disabling Passive Mouse Tracking
