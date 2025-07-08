@@ -63,24 +63,25 @@ than having no synchronized output at all.
 
 ### Adoption State
 
-| Support | Terminal/Tookit/App   | Notes  |
-|---------|------------|--------|
-| n/a     | xterm.js   | see tracker [xterm.js#3375](https://github.com/xtermjs/xterm.js/issues/3375) |
-| not yet | Windows Terminal | Proof-of-concept implementation by @j4james exists; tracker: [wt#8331](https://github.com/microsoft/terminal/issues/8331)  |
-| ✅      | Contour    | |
-| ✅      | mintty     | |
-| ✅      | Jexer      | |
-| ✅      | notcurses  | see tracker: [notcurses#1582](https://github.com/dankamongmen/notcurses/issues/1582) |
-| ✅      | foot       | terminal emulator https://codeberg.org/dnkl/foot
-| ✅    | Wezterm    | see tracker: [wezterm#882](https://github.com/wez/wezterm/issues/882) |
-| not yet | VTE / gnome-terminal | see tracker: [gitlab/vte#15](https://gitlab.gnome.org/GNOME/vte/-/issues/15) |
-| ✅      | iTerm2     | |
-| ✅      | Kitty      | since [5768c54c5b5763e4bbb300726b8ff71b40c128f8](https://github.com/kovidgoyal/kitty/commit/5768c54c5b5763e4bbb300726b8ff71b40c128f8) |
-| planned | Warp       | see tracker: https://github.com/warpdotdev/Warp/issues/2185 |
-| unknown | Alacritty  | |
-| unknown | [Konsole](https://konsole.kde.org/)    | |
-| unknown | urxvt      | |
-| unknown | [st](https://st.suckless.org/) | |
+| Support | Terminal/Tookit/App                                        | Notes |
+|---------|------------------------------------------------------------|-------|
+| ✅      | [Alacritty](https://github.com/alacritty/alacritty)        | [alacritty#96](https://github.com/alacritty/vte/pull/96) |
+| ✅      | [Contour](https://github.com/contour-terminal/contour/)    | |
+| ✅      | [foot](https://codeberg.org/dnkl/foot)                     | |
+| ✅      | [ghostty](https://github.com/ghostty-org/ghostty)          | [commit](https://github.com/ghostty-org/ghostty/commit/2cc1e4371651ccd692f3e8e8ba5a5cf731b2e21f) |
+| ✅      | [iTerm2](https://github.com/gnachman/iTerm2)               | |
+| ✅      | [Jexer](https://gitlab.com/AutumnMeowMeow/jexer)           | |
+| ✅      | [Kitty](https://github.com/kovidgoyal/kitty)               | [commit](https://github.com/kovidgoyal/kitty/commit/5768c54c5b5763e4bbb300726b8ff71b40c128f8) |
+| unknown | [Konsole](https://konsole.kde.org/)                        | |
+| ✅      | [mintty](https://github.com/mintty/mintty)                 | |
+| ✅      | [notcurses](https://github.com/dankamongmen/notcurses)     | [notcurses#1582](https://github.com/dankamongmen/notcurses/issues/1582) |
+| unknown | [st](https://st.suckless.org/)                             | |
+| unknown | [urxvt](https://software.schmorp.de/pkg/rxvt-unicode.html) | |
+| not yet | [VTE](https://gitlab.gnome.org/GNOME/vte) / gnome-terminal | [gitlab/vte#15](https://gitlab.gnome.org/GNOME/vte/-/issues/15) |
+| ✅      | [Warp](https://github.com/warpdotdev/Warp)                 | [warp#2185](https://github.com/warpdotdev/Warp/issues/2185) |
+| ✅      | [Wezterm](https://github.com/wez/wezterm)                  | [wezterm#882](https://github.com/wez/wezterm/issues/882) |
+| ✅      | [Windows Terminal](https://github.com/microsoft/terminal/) | [wt#18826](https://github.com/microsoft/terminal/pull/18826) |
+| not yet | [xterm.js](https://github.com/xtermjs/xterm.js/)           | [xterm.js#3375](https://github.com/xtermjs/xterm.js/issues/3375) |
 
 
 In case some project is adding support for this feature, please leave a comment or contact me, so we can keep the spec and implementation state table up to date.
