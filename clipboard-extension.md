@@ -1,10 +1,10 @@
 # Clipboard Extension
 
-The Clipboard Extension supports copying to the clipboard using a subset of the XTerm OSC 52 escape sequence. 
+The Clipboard Extension supports copying to the clipboard using a subset of the XTerm `OSC 52` escape sequence.
 
 ## Feature detection
 
-Support for this functionality in a terminal is indicated by the extension parameter 52 in the Device Attributes (DA) report.
+Support for this functionality in a terminal is indicated by the extension parameter `52` in the Device Attributes (`DA`) report.
 
 ## Syntax
 The escape sequence has the following syntax:
@@ -13,9 +13,9 @@ The escape sequence has the following syntax:
 OSC 52 ; Pc ; Pd ST
 ```
 
-Conforming terminals MUST at least support an empty Pc value, and a Pc value of c. Other values are optional.
+Conforming terminals MUST at least support an empty _Pc_ value, and a _Pc_ value of `c`. Other values are optional.
 
-Conforming terminals MUST support a Pd value that is a base64 encoded representation of the content that will be copied to the clipboard. They SHOULD also support an empty Pd value to clear the clipboard. They MAY support a Pd value of ? to query the clipboard content (as specified in the XTerm documentation).
+Conforming terminals MUST support a _Pd_ value that is a base64 encoded representation of the content that will be copied to the clipboard. They SHOULD also support an empty _Pd_ value to clear the clipboard. They MAY support a _Pd_ value of `?` to query the clipboard content (as specified in the XTerm documentation).
 
 If a terminal has an option to disable clipboard access, it MUST only indicate support for this extension when writing to the clipboard is actually allowed.
 
@@ -28,9 +28,9 @@ If a terminal has an option to disable clipboard access, it MUST only indicate s
 | ✅      | [Contour](https://github.com/contour-terminal/contour/)    | [contour#1769](https://github.com/contour-terminal/contour/pull/1769) |
 | not yet | [DomTerm](https://github.com/PerBothner/DomTerm)           | [domterm#124](https://github.com/PerBothner/DomTerm/issues/124) |
 | ✅      | [foot](https://codeberg.org/dnkl/foot)                     | [foot#2130](https://codeberg.org/dnkl/foot/pulls/2130) |
-| not yet | [ghostty](https://github.com/ghostty-org/ghostty)          | [ghostty#7590](https://github.com/ghostty-org/ghostty/discussions/7590) |
+| ✅      | [ghostty](https://github.com/ghostty-org/ghostty)          | [commit](https://github.com/ghostty-org/ghostty/commit/259228698873c0c934741445ec6790cfafb64502) |
 | not yet | [iTerm2](https://github.com/gnachman/iTerm2)               | |
-| not yet | [Kitty](https://github.com/kovidgoyal/kitty)               | |
+| ✅      | [Kitty](https://github.com/kovidgoyal/kitty)               | [commit](https://github.com/kovidgoyal/kitty/commit/eabddc287043083e25f57b236df7f0c9883760a5) |
 | not yet | [Konsole](https://konsole.kde.org/)                        | |
 | not yet | [mintty](https://github.com/mintty/mintty)                 | |
 | not yet | [mlterm](https://github.com/arakiken/mlterm)               | [mlterm#144](https://github.com/arakiken/mlterm/issues/144) |
