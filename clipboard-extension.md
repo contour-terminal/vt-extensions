@@ -32,8 +32,8 @@ If a terminal has an option to disable clipboard access, it MUST only indicate s
 | not yet | [iTerm2](https://github.com/gnachman/iTerm2)               | |
 | ✅      | [Kitty](https://github.com/kovidgoyal/kitty)               | [commit](https://github.com/kovidgoyal/kitty/commit/eabddc287043083e25f57b236df7f0c9883760a5) |
 | not yet | [Konsole](https://konsole.kde.org/)                        | |
-| not yet | [mintty](https://github.com/mintty/mintty)                 | |
-| not yet | [mlterm](https://github.com/arakiken/mlterm)               | [mlterm#144](https://github.com/arakiken/mlterm/issues/144) |
+| ✅      | [mintty](https://github.com/mintty/mintty)                 | [commit](https://github.com/mintty/mintty/commit/e1d0a95a819ddc20b3bef1f9256c5645e6db7782) |
+| ✅      | [mlterm](https://github.com/arakiken/mlterm)               | [commit](https://github.com/arakiken/mlterm/commit/568b0fc76bd6084a85ee1e451a38f25f2b880ff3) |
 | not yet | [st](https://st.suckless.org/)                             | |
 | not yet | [VTE](https://gitlab.gnome.org/GNOME/vte) / gnome-terminal | |
 | ✅      | [Wezterm](https://github.com/wez/wezterm)                  | [wezterm#7046](https://github.com/wezterm/wezterm/pull/7046) |
@@ -45,7 +45,7 @@ If a terminal has an option to disable clipboard access, it MUST only indicate s
 | Support | Tookit/App                                                 | Notes |
 |---------|------------------------------------------------------------|-------|
 | ✅      | [dte](https://github.com/craigbarnes/dte)                  | [commit](https://github.com/craigbarnes/dte/commit/bed8412692d2363e1198e838393b0f0cb1c197d8) |
-| not yet | [neovim](https://github.com/neovim/neovim)                 | [neovim#34472](https://github.com/neovim/neovim/issues/34472) |
+| ✅      | [neovim](https://github.com/neovim/neovim)                 | [neovim#34860](https://github.com/neovim/neovim/pull/34860) |
 | not yet | [notcurses](https://github.com/dankamongmen/notcurses)     | |
 | ✅      | [tmux](https://github.com/tmux/tmux)                       | [commit](https://github.com/tmux/tmux/commit/d858ad1179d98fb5ab31a4e077e789200ef7e411) |
 
