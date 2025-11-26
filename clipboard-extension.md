@@ -15,7 +15,7 @@ OSC 52 ; Pc ; Pd ST
 
 Conforming terminals MUST at least support an empty _Pc_ value, and a _Pc_ value of `c`. Other values are optional.
 
-Conforming terminals MUST support a _Pd_ value that is a base64 encoded representation of the content that will be copied to the clipboard. They SHOULD also support an empty _Pd_ value to clear the clipboard. They MAY support a _Pd_ value of `?` to query the clipboard content (as specified in the XTerm documentation).
+Conforming terminals MUST support a _Pd_ value that is a base64 encoded representation of the content that will be copied to the clipboard. They SHOULD also support an empty _Pd_ value to clear the clipboard. They MAY support a _Pd_ value of `?` to query the clipboard content (as specified in the XTerm documentation). The base64 encoded representation SHOULD be without line feeds or other whitespace (as specified in RFC 4648).
 
 If a terminal has an option to disable clipboard access, it MUST only indicate support for this extension when writing to the clipboard is actually allowed.
 
@@ -45,6 +45,7 @@ If a terminal has an option to disable clipboard access, it MUST only indicate s
 | Support | Tookit/App                                                 | Notes |
 |---------|------------------------------------------------------------|-------|
 | ✅      | [dte](https://github.com/craigbarnes/dte)                  | [commit](https://github.com/craigbarnes/dte/commit/bed8412692d2363e1198e838393b0f0cb1c197d8) |
+| not yet | [jexer](https://gitlab.com/AutumnMeowMeow/jexer)           | [jexer](https://gitlab.com/AutumnMeowMeow/jexer/-/issues/142) |
 | ✅      | [neovim](https://github.com/neovim/neovim)                 | [neovim#34860](https://github.com/neovim/neovim/pull/34860) |
 | not yet | [notcurses](https://github.com/dankamongmen/notcurses)     | |
 | ✅      | [tmux](https://github.com/tmux/tmux)                       | [commit](https://github.com/tmux/tmux/commit/d858ad1179d98fb5ab31a4e077e789200ef7e411) |
