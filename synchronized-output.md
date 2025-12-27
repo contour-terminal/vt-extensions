@@ -66,6 +66,7 @@ than having no synchronized output at all.
 | Support | Terminal/Tookit/App                                        | Notes |
 |---------|------------------------------------------------------------|-------|
 | ✅      | [Alacritty](https://github.com/alacritty/alacritty)        | [alacritty#96](https://github.com/alacritty/vte/pull/96) |
+| ✅      | [BossTerm](https://github.com/kshivang/BossTerm)           | [v1.0.54](https://github.com/kshivang/BossTerm/releases/tag/v1.0.54) |
 | ✅      | [Contour](https://github.com/contour-terminal/contour/)    | |
 | ✅      | bubbletea | https://github.com/charmbracelet/bubbletea/discussions/1320 |
 | ✅      | [foot](https://codeberg.org/dnkl/foot)                     | |
