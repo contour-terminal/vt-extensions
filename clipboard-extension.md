@@ -45,6 +45,7 @@ If a terminal has an option to disable clipboard access, it MUST only indicate s
 | Support | Tookit/App                                                 | Notes |
 |---------|------------------------------------------------------------|-------|
 | ✅      | [dte](https://github.com/craigbarnes/dte)                  | [commit](https://github.com/craigbarnes/dte/commit/bed8412692d2363e1198e838393b0f0cb1c197d8) |
+| ✅      | [emacs](https://www.gnu.org/software/emacs)                | [commit](https://cgit.git.savannah.gnu.org/cgit/emacs.git/commit/?id=d4dde314ffbc97cb3431e8803e8fb46ce36c2274) |
 | not yet | [jexer](https://gitlab.com/AutumnMeowMeow/jexer)           | [jexer](https://gitlab.com/AutumnMeowMeow/jexer/-/issues/142) |
 | ✅      | [neovim](https://github.com/neovim/neovim)                 | [neovim#34860](https://github.com/neovim/neovim/pull/34860) |
 | not yet | [notcurses](https://github.com/dankamongmen/notcurses)     | |
