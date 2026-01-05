@@ -29,7 +29,7 @@ If a terminal has an option to disable clipboard access, it MUST only indicate s
 | not yet | [DomTerm](https://github.com/PerBothner/DomTerm)           | [domterm#124](https://github.com/PerBothner/DomTerm/issues/124) |
 | ✅      | [foot](https://codeberg.org/dnkl/foot)                     | [foot#2130](https://codeberg.org/dnkl/foot/pulls/2130) |
 | ✅      | [ghostty](https://github.com/ghostty-org/ghostty)          | [commit](https://github.com/ghostty-org/ghostty/commit/259228698873c0c934741445ec6790cfafb64502) |
-| ✅      | [iTerm2](https://github.com/gnachman/iTerm2)               | |
+| ✅      | [iTerm2](https://github.com/gnachman/iTerm2)               | [commit](https://gitlab.com/gnachman/iterm2/-/commit/151275e36b89fc053882be0f8819c290315cc048)|
 | ✅      | [Kitty](https://github.com/kovidgoyal/kitty)               | [commit](https://github.com/kovidgoyal/kitty/commit/eabddc287043083e25f57b236df7f0c9883760a5) |
 | not yet | [Konsole](https://konsole.kde.org/)                        | |
 | ✅      | [mintty](https://github.com/mintty/mintty)                 | [commit](https://github.com/mintty/mintty/commit/e1d0a95a819ddc20b3bef1f9256c5645e6db7782) |
