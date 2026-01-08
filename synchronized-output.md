@@ -84,7 +84,7 @@ than having no synchronized output at all.
 | ✅      | [Warp](https://github.com/warpdotdev/Warp)                 | [warp#2185](https://github.com/warpdotdev/Warp/issues/2185) |
 | ✅      | [Wezterm](https://github.com/wez/wezterm)                  | [wezterm#882](https://github.com/wez/wezterm/issues/882) |
 | ✅      | [Windows Terminal](https://github.com/microsoft/terminal/) | [wt#18826](https://github.com/microsoft/terminal/pull/18826) |
-| not yet | [xterm.js](https://github.com/xtermjs/xterm.js/)            | [xterm.js#3375](https://github.com/xtermjs/xterm.js/issues/3375) |
+| ✅      | [xterm.js](https://github.com/xtermjs/xterm.js/)           | [xterm.js#3375](https://github.com/xtermjs/xterm.js/issues/3375) |
 | ✅ (see notes) | [st](https://st.suckless.org/)                      | via patch: https://st.suckless.org/patches/sync/ |
 | ✅      | [Zellij](https://github.com/zellij-org/zellij)             | https://github.com/zellij-org/zellij/pull/2977 |
 
