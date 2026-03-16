@@ -3,18 +3,18 @@
 ## Motivation
 
 While mouse event tracking is already possible in various modes and encodings,
-this feature seems most used by alt-screen applications however.
+this feature is most commonly used by alt-screen applications.
 
-The reason why primary screen applications (such as your shell) usually don't make use of the mouse,
-is the design problem, that whenever the application is requesting mouse tracking events,
+The reason why primary screen applications (such as your shell) usually don't make use of the mouse
+is that whenever the application is requesting mouse tracking events,
 the user cannot use the mouse to select text on the screen anymore.
 
-With this VT extension, a new mode is introduced to inform the terminal that the user
-may still use the mouse to select text, but still have mouse events being reported to the application
-to allow passive tracking of mouse events.
+With this VT extension, a new mode is introduced to let the application receive mouse events,
+while still allowing the user to select text on the screen with the mouse
+or scroll the viewport with the mouse wheel.
 
-This can then be used by shells to still act on mouse click events to reposition the cursor or
-mouse-hover events over commands to enable the possibility for the shell to create tooltips.
+This can then be used by shell-like applications in the primary screen to still act on mouse click events to reposition the cursor or
+mouse-hover events over commands to enable the possibility for the application to create tooltips.
 
 ## What this specification is Not
 
@@ -24,21 +24,7 @@ nor trying to handle every little corner case that may or may not arise in the u
 We however attempt to address a current need in a way that this specification is easily understood,
 easily implementable on both sides, and most importantly, helpful to users.
 
-## Semantics
-
-The semantics of mouse reporting are not altered.
-
-The application only receives mouse tracking events for the main page area.
-
-Passive mouse tracking mode will ONLY work in conjunction with SGR transport mode (`?1006`).
-Using it with any other transport mode (e.g. X10, UTF-8, or URXVT) will be ignored.
-
-The SGR mouse events received by the application will contain an additional parameter
-to the end indicating if this event has also been handled by the user interface (terminal frontend) or not.
-
-While mode ?2029 is active mode ?1007 has no effect (i.e. wheel events are not translated to arrow keys).
-
-## Feature and mode detection.
+## Feature and mode detection
 
 Use `DECRQM` to detect if the mode is supported and if so, its current state.
 Passive mouse tracking is considered supported if and only if
@@ -53,15 +39,13 @@ In case mouse move events are desired as well, the application is free to send `
 
 ## Syntax of the events being received
 
-Since only SGR encoding is supported for passive mouse tracking, the syntax looks equivalent to this, except that an additional parameter is added to indicate whether or not the user interface (terminal) has handled this event as well.
+Since only SGR encoding is supported for passive mouse tracking, the syntax looks equivalent to this.
 
-Mouse Press (and move) Syntax: `CSI ? BUTTON_AND_MODIFIER_MASK ; COLUMN ; LINE ; HANDLED_FLAG M`
+Mouse Press (and move) Syntax: `CSI ? BUTTON_AND_MODIFIER_MASK ; COLUMN ; LINE M`
 
-Mouse Release Syntax: `CSI ? BUTTON_AND_MODIFIER_MASK ; COLUMN ; LINE ; HANDLED_FLAG m`
+Mouse Release Syntax: `CSI ? BUTTON_AND_MODIFIER_MASK ; COLUMN ; LINE m`
 
 Whereas `BUTTON_AND_MODIFIER_MASK`, `COLUMN`, `LINE` are equivalent to how it is handled already.
-`HANDLED_FLAG` is either `1` or greater to indicate that the user interface has handled this event as well,
-or value `0` to indicate that the user interface has not handled this event.
 
 ## Disabling Passive Mouse Tracking
 
@@ -71,8 +55,16 @@ It is therefore sufficient to simply send this single VT sequence to have it all
 
 ## Disabling other mouse modes
 
-When disabling other mouse modes (events as well as encoding) should alo disable passive mouse tracking implicitly
-in order to best avoid leaking passive mouse tracking into another application by accident.
+Disabling other mouse modes (events as well as encoding) should also disable passive mouse tracking implicitly in order to best avoid leaking passive mouse tracking into another application by accident.
+
+## Semantics
+
+The semantics of mouse reporting are not altered by passive mouse tracking mode, but the application will only receive mouse events for the main page area and not for the "scrollback" buffer (if available).
+
+Passive mouse tracking mode will ONLY allow SGR transport mode (`?1006`).
+When passive mouse tracking mode is enabled, the terminal will ignore any attempt to switch to another transport mode and will stay in passive mouse tracking mode with SGR transport encoding.
+
+While mode `?2029` is active, mode `?1007` has no effect (i.e. wheel events are not translated to arrow keys).
 
 ## Implementation Notes
 
@@ -97,7 +89,7 @@ the application may do the following:
 
 Alternatively a very conservative way:
 
-1. Disable mouse protocol (`CSI ?2929 l`)
+1. Disable mouse protocol (`CSI ?2029 l`)
 2. Request `DA1`
 3. Consume and discard any input until `DA1`'s response has been received.
 4. Execute child process.
